@@ -10,9 +10,9 @@ getgenv().Howl = {
 	},
 	["Aimbot"] = {
 		Prediction = 0.1,
-		Smoothness = 0.1,
-		Part = "HumanoidRootPart",
-		PredictionAdjuster = true,
+		Smoothness = 1,
+		Part = "Head",
+		PredictionAdjuster = false,
 
 		["MultipleParts"] = {
 			Enabled = false,
@@ -25,8 +25,8 @@ getgenv().Howl = {
 		},
 
 		["MouseTp"] = {
-			Smoothness = 1, -- // Having really high smoothness is what makes it "MouseTp"
-			Prediction = 0,
+			Smoothness = 1,
+			Prediction = 0.1,
 			Part = "Head",
 		},
 
@@ -36,10 +36,9 @@ getgenv().Howl = {
 		},
 	},
 	["Silent"] = {
-		Prediction = 0.1,
-		Part = "UpperTorso",
+		Prediction = 0.12361,
+		Part = "HumanoidRootPart",
 		PredictionAdjuster = false,
-		Detection = { Close = 35, Mid = 65, Far = math.huge }, -- // These are distance values, NOT FOV.
 
 		["MultipleParts"] = {
 			Enabled = false,
@@ -47,8 +46,11 @@ getgenv().Howl = {
 		},
 
 		["Offsets"] = { -- // If you don't want to use Offsets, just put their amount to 0
+
 			Jump = { Amount = 0 },
+
 			Fall = { Amount = 0 },
+
 		},
 	},
 	["FieldOfView"] = {
