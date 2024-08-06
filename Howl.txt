@@ -1,56 +1,54 @@
 getgenv().script_key = script_key; -- do not touch
 getgenv().Howl = {
-	["Type"] = "Target", -- FOV / Target
-	["UpdateNotification"] = true,
-	["Keybind"] = {
-		Aimbot = "E",
-		Resolver = "C",
-		Flip360 = "V",
-		Macro = "X",
+	["Options"] = {
+		Type = "Target", -- FOV / Target
+		UpdateNotification = true,
+
+		["Keybind"] = {
+			Aimbot = "E",
+			Resolver = "C",
+			Flip360 = "V",
+			Macro = "X",
+		},
 	},
-	["Aimbot"] = {
-		Prediction = 0.1,
-		Smoothness = 1,
-		Part = "Head",
-		PredictionAdjuster = false,
-
-		["MultipleParts"] = {
-			Enabled = false,
-			Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
-		},
-
-		["Shake"] = {
-			Enabled = false,
-			Amount = 5,
-		},
-
-		["MouseTp"] = {
-			Smoothness = 1,
-			Prediction = 0.1,
+	["Combat"] = {
+		["Aimbot"] = {
+			Prediction = 0.112,
+			Smoothness = 0.475,
 			Part = "Head",
+
+			["MultipleParts"] = {
+				Enabled = false,
+				Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
+			},
+
+			["Air"] = {
+				Smoothness = 0.475,
+				Prediction = 0.112,
+				Part = "Head",
+			},
+
+			["Shake"] = {
+				Enabled = false,
+				Amount = 5,
+			},
 		},
+		["Silent"] = {
+			Prediction = 0.12361,
+			Part = "HumanoidRootPart",
 
-		["360"] = {
-			Enabled = true,
-			Speed = 1500,
-		},
-	},
-	["Silent"] = {
-		Prediction = 0.12361,
-		Part = "HumanoidRootPart",
-		PredictionAdjuster = false,
+			["MultipleParts"] = {
+				Enabled = false,
+				Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
+			},
 
-		["MultipleParts"] = {
-			Enabled = false,
-			Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
-		},
+			["Offsets"] = {
 
-		["Offsets"] = { -- // If you don't want to use Offsets, just put their amount to 0
+				Jump = { Amount = 0 },
 
-			Jump = { Amount = 0 },
+				Fall = { Amount = 0 },
 
-			Fall = { Amount = 0 },
-
+			},
 		},
 	},
 	["FieldOfView"] = {
@@ -69,35 +67,33 @@ getgenv().Howl = {
 			DotsSize = 1.5,
 			Thickness = 0.5,
 
-			["Pulse"] = {
-				Enabled = true,
-				Amplitude = 50,
-				Speed = 0.2,
-			},
-
-			["Spin"] = {
-				Enabled = true,
-				Speed = 100,
-			},
 		},
 	},
-	["PredictionAdjuster"] = {
-		VelocityThreshold = 250,
-	},
-	["Checks"] = {
-		KnockedChecks = false,
-		TargetDeath = false,
-		PlayerDeath = true,
-		WallCheck = false,
-	},
-	["Resolver"] = {
-		Enabled = false,
-		Notification = true,
-	},
-	["Macro"] = {
-		Enabled = true,
-		Speed = 0.065,
-		Type = "Electron", -- // "First", "Third", "Electron" (Dosen't use "Speed")
+	["Misc"] = {
+		["PredictionAdjuster"] = {
+			Enabled = false,
+			VelocityThreshold = 250,
+		},
+		["Checks"] = {
+			KnockedChecks = false,
+			TargetDeath = false,
+			PlayerDeath = true,
+			WallCheck = false,
+
+			["Resolver"] = {
+				Enabled = false,
+				Notification = true,
+			},
+		},
+		["Macro"] = {
+			Enabled = true,
+			Speed = 0.065,
+			Type = "Electron", -- // "First", "Third", "Electron" (Dosen't use "Speed")
+		},
+		["360"] = {
+			Enabled = true,
+			Speed = 1500,
+		},
 	},
 }
 
